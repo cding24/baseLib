@@ -1,0 +1,74 @@
+import com.cding.depend.AndroidX
+import com.cding.depend.Depend
+import com.cding.depend.Versions
+
+plugins {
+    id('com.android.application')
+    id('kotlin-android')
+    id('kotlin-kapt')
+}
+
+android {
+    namespace "com.cding.app"
+    compileSdk Versions.compileSdkVersion
+
+    defaultConfig {
+        applicationId Versions.applicationId
+
+        minSdk Versions.minSdkVersion
+        targetSdk Versions.targetSdkVersion
+        versionCode Versions.versionCode
+        versionName Versions.versionName
+    }
+
+    buildTypes {
+        debug{
+            minifyEnabled false
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+            )
+        }
+        release {
+            minifyEnabled false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    api project(':baseLib')
+
+    AndroidX.values.forEach { implementation(it) }
+
+    //第三方
+    implementation(Depend.refreshKernel)
+    implementation(Depend.refreshHeader)
+    implementation(Depend.refreshFooter)
+    implementation(Depend.banner)
+    implementation(Depend.BRVAH)
+    implementation(Depend.bdclta)
+    implementation(Depend.bdcltaRv)
+
+    //mqtt
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    implementation 'org.bouncycastle:bcpkix-jdk15to18:1.69'
+}
