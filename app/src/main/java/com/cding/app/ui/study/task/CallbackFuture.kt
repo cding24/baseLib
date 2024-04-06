@@ -1,4 +1,4 @@
-package com.cding.app.task
+package com.cding.app.ui.study.task
 
 import com.blankj.utilcode.util.LogUtils
 import java.util.concurrent.CountDownLatch

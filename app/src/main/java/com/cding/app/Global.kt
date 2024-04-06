@@ -1,4 +1,4 @@
-package com.cding.app.ui.study
+package com.cding.app
 
 object Global {
     //MQTT 协议+IP+端口

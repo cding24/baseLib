@@ -9,7 +9,7 @@ import android.webkit.WebViewClient
 import com.cding.common.base.BaseVMActivity
 import com.cding.common.base.NoViewModel
 import com.cding.app.databinding.ActivityDetailBinding
-import com.cding.app.ui.study.RxJavaStudyActivity
+import com.cding.app.ui.study.RxJavaStdActivity
 
 
 /**
@@ -31,7 +31,7 @@ class DetailActivity : BaseVMActivity<NoViewModel, ActivityDetailBinding>() {
 
     override fun initData() {
         dataBinding.titleTV.setOnClickListener {
-            startActivity(Intent(this@DetailActivity, RxJavaStudyActivity::class.java))
+            startActivity(Intent(this@DetailActivity, RxJavaStdActivity::class.java))
         }
     }
 

@@ -1,6 +1,7 @@
 package com.cding.app.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import com.cding.common.base.BaseVMActivity
 import com.cding.common.base.NoViewModel
@@ -10,6 +11,7 @@ import com.cding.app.databinding.ActivityMainBinding
 import com.cding.app.ui.home.HomeFragment
 import com.cding.app.ui.me.MeFragment
 import com.cding.app.ui.project.ProjectFragment
+import com.cding.app.ui.study.ConstuctorPerson
 
 
 /**

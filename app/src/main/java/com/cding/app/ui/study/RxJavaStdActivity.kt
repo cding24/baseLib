@@ -15,7 +15,7 @@ import io.reactivex.rxjava3.functions.Action
 import io.reactivex.rxjava3.schedulers.Schedulers
 
 
-class RxJavaStudyActivity: BaseVMActivity<RxViewModel, ActivityReactiveExtensionsBinding>() {
+class RxJavaStdActivity: BaseVMActivity<RxViewModel, ActivityReactiveExtensionsBinding>() {
 
     override fun initView(savedInstancSetate: Bundle?) {
         dataBinding.btn1.setOnIntervalClickListener {

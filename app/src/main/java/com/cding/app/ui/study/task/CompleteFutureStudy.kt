@@ -1,8 +1,8 @@
-package com.cding.app.ui.study
+package com.cding.app.ui.study.task
 
 import android.os.Bundle
 import com.cding.app.databinding.ActivityCoroutineStudyBinding
-import com.cding.app.task.CallbackFuture
+import com.cding.app.ui.study.RxViewModel
 import com.cding.common.base.BaseVMActivity
 import java.util.concurrent.Callable
 import java.util.concurrent.Executors

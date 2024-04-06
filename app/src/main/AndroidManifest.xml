@@ -38,7 +38,7 @@
         <activity
                 android:name="com.cding.app.ui.detail.DetailActivity"
                 android:exported="false" />
-        <activity android:name="com.cding.app.ui.study.RxJavaStudyActivity" />
+        <activity android:name="com.cding.app.ui.study.RxJavaStdActivity" />
 
         <!-- Mqtt服务 -->
         <service android:name="org.eclipse.paho.android.service.MqttService" />
